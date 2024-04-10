@@ -1,105 +1,295 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crew Members</title>
-<style>
-    body {
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Crew Members</title>
+
+    <!-- google font  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+
+
+<!-- alegere font -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+
+      body {
+
         font-family: Arial, sans-serif;
+
         margin: 0;
+
         padding: 0;
+
         background-color: #131010;
-    }
+      }
 
-    .container {
+
+
+      .container {
+
+        background-image: url("assets/img/bike.jpg");
+
+        background-size: 1000px;
+
         max-width: 800px;
+
         margin: 50px auto;
+
         padding: 20px;
-        background-color: #fff;
+
+        background-color: #050505;
+
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
 
-    h1 {
+        box-shadow: 0 0 10px rgb(246, 244, 244);
+
+      }
+
+
+
+      h1 {
+
         text-align: center;
-        margin-bottom: 20px;
-    }
 
-    .team-member {
+        margin-bottom: 20px;
+
+      }
+
+
+
+      .team-member {
+
         display: flex;
+
         align-items: center;
+
         margin-bottom: 20px;
+
         padding: 10px;
+
         border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    }
 
-    .team-member img {
+        box-shadow: 0 0 5px rgb(254, 254, 254);
+
+      }
+
+
+
+      .team-member img {
+
         width: 80px;
+
         height: 80px;
+
         border-radius: 50%;
+
         margin-right: 20px;
-    }
 
-    .team-member h3 {
+      }
+
+
+
+      .team-member h3 {
+
         margin: 0;
-    }
 
-    .team-member p {
+      }
+
+
+
+      .team-member p {
+
         margin: 5px 0 0;
+
         color: #666;
-    }
-</style>
-</head>
-<body>
 
-<div class="container">
-    <h1>Crew members</h1>
+      }
 
-    <div class="team-member">
+      h3{
+
+        color: rgb(202, 200, 200);
+
+        text-shadow: 0 0 5px black;
+
+        /* font-family: "Alegreya"; */
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        font-weight: bold;
+
+      }
+
+      h1{
+
+        font-family: "Libre Baskerville";
+
+        font-weight: bold;
+
+        color: white;
+
+        text-shadow: 0 0 5px black;
+
+      }
+
+      .container:hover{
+
+        /* background image for the pr crew members */
+
+        background-image: url("assets/img/prteam.jpg");
+
+        background-size: 850px;
+
+        max-width: 800px;
+
+        margin: 50px auto;
+
+        padding: 20px;
+
+        background-color: #050505;
+
+        border-radius: 10px;
+
+        box-shadow: 0 0 10px rgb(246, 244, 244);
+
+
+
+      }
+
+
+
+      #main:hover{
+
+        visibility: hidden;
+
+      }
+
+      #hov{
+
+        visibility: hidden;
+
+      }
+
+      #hov:hover{
+
+        visibility: visible;
+
+      }
+
+
+
+      #t3:hover{
+
+        visibility: hidden;
+
+
+
+      }
+
+      
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container heading">
+
+      <h1 class="heading">Crew members</h1>
+
+
+
+      <div class="team-member">
+
         <div>
-            <h3>M DIYA</h3>
-            <H4>Team lead</H4>
+
+          <h3>DIYA &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;RegN0:23BME1107  &nbsp; &nbsp;&nbsp; Ph:7358671039 </h3>
 
         </div>
+
+      </div>
+
+
+
+      <div class="team-member">
+
+        <div>
+
+          <h3>DEEPAK &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; RegNo:23BMH1027&nbsp; &nbsp;&nbsp;  Ph:8807901394</h3>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="team-member">
+
+        <div>
+
+          <h3>SIVADHAKSA &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; RegNo:23BMH1049 &nbsp; &nbsp;&nbsp;Ph:9889884465</h3>
+
+        </div>
+
+      </div>
+
+      <div class="team-member">
+
+        <div>
+
+          <h3>GOURI LAKSHMI&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; RegNo:23BMH1121 &nbsp; &nbsp;&nbsp;Ph:8714226202</h3>
+
+        </div>
+
+      </div>
+
+      <div class="team-member">
+
+        <div>
+
+          <h3 id="t3">AKSHATA &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; RegNo:23BMV1017 &nbsp; &nbsp;&nbsp;Ph:6382770587</h3>
+
+        </div>
+
+      </div>
+
+      <div class="team-member">
+
+        <div>
+
+          <h3>CHRISTA &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; RegNo:23BMH1126 &nbsp; &nbsp;&nbsp;Ph:9884824996</h3>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Add more team members as needed -->
+
     </div>
 
-    <div class="team-member">
-        <div>
-            <h3> DEEPAK P
-            </h3>
-        </div>
-    </div>
+  </body>
 
-    <div class="team-member">
-        <div>
-            <h3>SIVADHAKSA V
-            </h3>
-        </div>
-    </div>
-    <div class="team-member">
-        <div>
-            <h3>GOURI LAKSHMI
-</h3>
-        </div>
-    </div>
-    <div class="team-member">
-        <div>
-            <h3>S AKSHATHA
-</h3>
-        </div>
-    </div>
-    <div class="team-member">
-        <div>
-            <h3>P CHRISTA DARYN
-</h3>
-        </div>
-    </div>
-    
-    <!-- Add more team members as needed -->
-
-</div>
-
-</body>
 </html>
+
