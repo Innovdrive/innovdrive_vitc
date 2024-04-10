@@ -54,45 +54,45 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>Crew members</h1>
-
-    <div class="team-member">
-        <div>
-            <h3>S M KISHORE</h3>
-            <h4>Team Lead</h4>            
-        </div>
+    <div class="container">
+        <h1>Body Works Crew Members</h1>
     </div>
 
-    <div class="team-member">
-        <div>
-            <h3>DHANUSH JAGADEESH
-            </h3>
-        </div>
-    </div>
+    <script>
+        // Sample data string formatted as "name regno phno name regno phno..."
+        var dataString = "S_M_KISHORE 23BME1045 9342348275 DANUSHJAGADEESH 23BME1058 9789664475 D_ABISHEK 23BME1217 9363350425 NITHISH_KARUNAKARAN 23BME1163 8825622586 GOURI_LAKSHMI 23BMH1121 8714226202";
+        // Splitting the string into individual person chunks
+        var personChunks = dataString.split(" ");
 
-    <div class="team-member">
-        <div>
-            <h3>ABISHEK D
-            </h3>
-        </div>
-    </div>
-    <div class="team-member">
-        <div>
-            <h3>NITISH KARUNAKARAN
-</h3>
-        </div>
-    </div>
-    <div class="team-member">
-        <div>
-            <h3>GOURI LAKSHMI
-</h3>
-        </div>
-    </div>
-    
-    <!-- Add more team members as needed -->
+        // Reference to the container div
+        var container = document.querySelector('.container');
 
-</div>
+        // Loop through the chunks, extract and generate HTML code for each crew member
+        for (var i = 0; i < personChunks.length; i += 3) {
+            var name = personChunks[i];
+            var regNo = personChunks[i + 1];
+            var phNo = personChunks[i + 2];
 
+            // Create a new div for each team member
+            var teamMemberDiv = document.createElement("div");
+            teamMemberDiv.classList.add("team-member");
+
+            // Create an inner div for content
+            var innerDiv = document.createElement("div");
+
+            // Create an h3 element for the name, regno, phno
+            var h3Element = document.createElement("h3");
+            h3Element.textContent = name + " " + regNo + " " + phNo;
+
+            // Append the h3 element to the inner div
+            innerDiv.appendChild(h3Element);
+
+            // Append the inner div to the team member div
+            teamMemberDiv.appendChild(innerDiv);
+
+            // Append the team member div to the container
+            container.appendChild(teamMemberDiv);
+        }
+    </script>
 </body>
 </html>

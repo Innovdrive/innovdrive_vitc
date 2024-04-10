@@ -164,70 +164,46 @@
 
 
 
-<div class="container">
-
-    <h1>Crew members</h1>
-
-
-
-    <div class="team-member">
-
-        <div>
-
-            <h3>RAVI PRANAUV</h3>
-
-        </div>
-
+    <div class="container">
+        <h1>Crew Members</h1>
     </div>
 
+    <script>
+        // Sample data string formatted as "name regno phno name regno phno..."
+        var dataString = "RAVI_PRANAUV 23BCE5124 8508555176 R_HARITHA 23BEC1409 9585586683 P_PRAJINESH 23BEC1113 8056163330 YUVAN_PRAMESH_S 23BEC1031 9791161024 FAWAZ_AHAMED 23BPS1199 7418460166";
+        // Splitting the string into individual person chunks
+        var personChunks = dataString.split(" ");
 
+        // Reference to the container div
+        var container = document.querySelector('.container');
 
-    <div class="team-member">
+        // Loop through the chunks, extract and generate HTML code for each crew member
+        for (var i = 0; i < personChunks.length; i += 3) {
+            var name = personChunks[i];
+            var regNo = personChunks[i + 1];
+            var phNo = personChunks[i + 2];
 
-        <div>
+            // Create a new div for each team member
+            var teamMemberDiv = document.createElement("div");
+            teamMemberDiv.classList.add("team-member");
 
-            <h3>R HARITHA</h3>
+            // Create an inner div for content
+            var innerDiv = document.createElement("div");
 
-        </div>
+            // Create an h3 element for the name, regno, phno
+            var h3Element = document.createElement("h3");
+            h3Element.textContent = name + " " + regNo + " " + phNo;
 
-    </div>
+            // Append the h3 element to the inner div
+            innerDiv.appendChild(h3Element);
 
+            // Append the inner div to the team member div
+            teamMemberDiv.appendChild(innerDiv);
 
-
-    <div class="team-member">
-
-        <div>
-
-            <h3>P PRAJINESH
-            </h3>
-
-        </div>
-
-    </div>
-
-    <div class="team-member">
-
-        <div>
-
-            <h3>YUVAN PRAMESH S
-            </h3>
-
-        </div>
-
-    </div>
-    <div class="team-member">
-
-        <div>
-
-            <h3>FAWAZ AHAMED
-            </h3>
-
-        </div>
-
-    </div>
-
-    
-
+            // Append the team member div to the container
+            container.appendChild(teamMemberDiv);
+        }
+    </script>
     <!-- Add more team members as needed -->
 
 

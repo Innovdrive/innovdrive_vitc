@@ -164,56 +164,46 @@
 
 
 
-<div class="container">
-
-    <h1>Crew members</h1>
-
-
-
-    <div class="team-member">
-
-        <div>
-
-            <h3>THARUN</h3>
-
-        </div>
-
+    <div class="container">
+        <h1>Crew Members</h1>
     </div>
 
+    <script>
+        // Sample data string formatted as "name regno phno name regno phno..."
+        var dataString = "Tharun_SDR 23BCE5075 6379678164 R_RISHIKA 23BMH1050 6374964900 SIBIRAJ_S_V 23BME1130 8122603773 SARATHRAAJ 23BME1082 8870509452";
+        // Splitting the string into individual person chunks
+        var personChunks = dataString.split(" ");
 
+        // Reference to the container div
+        var container = document.querySelector('.container');
 
-    <div class="team-member">
+        // Loop through the chunks, extract and generate HTML code for each crew member
+        for (var i = 0; i < personChunks.length; i += 3) {
+            var name = personChunks[i];
+            var regNo = personChunks[i + 1];
+            var phNo = personChunks[i + 2];
 
-        <div>
+            // Create a new div for each team member
+            var teamMemberDiv = document.createElement("div");
+            teamMemberDiv.classList.add("team-member");
 
-            <h3>RISHIKA</h3>
+            // Create an inner div for content
+            var innerDiv = document.createElement("div");
 
-        </div>
+            // Create an h3 element for the name, regno, phno
+            var h3Element = document.createElement("h3");
+            h3Element.textContent = name + " " + regNo + " " + phNo;
 
-    </div>
+            // Append the h3 element to the inner div
+            innerDiv.appendChild(h3Element);
 
+            // Append the inner div to the team member div
+            teamMemberDiv.appendChild(innerDiv);
 
-
-    <div class="team-member">
-
-        <div>
-
-            <h3>SARATHRAAJ</h3>
-
-        </div>
-
-    </div>
-
-    <div class="team-member">
-
-        <div>
-
-            <h3>SIBIRAJ S V </h3>
-
-        </div>
-
-    </div>
-
+            // Append the team member div to the container
+            container.appendChild(teamMemberDiv);
+        }
+    </script>
     
 
     <!-- Add more team members as needed -->
@@ -221,9 +211,6 @@
 
 
 </div>
-
-
-
 </body>
 
 </html>
