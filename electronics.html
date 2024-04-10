@@ -192,6 +192,7 @@
 
             // Create an h3 element for the name, regno, phno
             var h3Element = document.createElement("h3");
+            var name = name.replace(/_/g," ");
             h3Element.textContent = name + " " + regNo + " " + phNo;
 
             // Append the h3 element to the inner div
